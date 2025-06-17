@@ -3,331 +3,243 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    line-height: 1.4; /* Tighter line height */
     color: #333;
-    background-color: #f8f8f8; /* Light background */
+    background-color: #f8f8f8;
+    overflow-y: hidden; /* Hide scrollbar for a "no-scroll" feel if content fits */
 }
 
 .container {
-    max-width: 960px;
+    max-width: 900px; /* Slightly wider to pack more horizontally */
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px 15px; /* Reduced padding */
 }
 
 /* Headings */
 h1, h2, h3 {
-    font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', sans-serif; /* Playful font for headings */
+    font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', sans-serif;
     color: #333;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 5px; /* Reduced margin */
 }
 
 h1 {
-    font-size: 2.8em;
-    color: #d9534f; /* Red from your logo */
-    margin-top: 20px;
-    margin-bottom: 10px;
+    font-size: 2.2em; /* Smaller h1 */
+    color: #d9534f;
+    margin-top: 10px;
 }
 
 h2 {
-    font-size: 2.2em;
-    color: #333;
-    margin-top: 40px;
-}
-
-h3 {
-    font-size: 1.5em;
-    color: #d9534f;
+    font-size: 1.6em; /* Smaller h2 */
+    margin-top: 15px;
+    margin-bottom: 5px;
 }
 
 /* Paragraphs */
 p {
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Reduced margin */
+    font-size: 0.95em; /* Slightly smaller text */
 }
 
-.small-text {
-    font-size: 0.9em;
-    color: #666;
+.subheadline {
+    font-size: 1.1em; /* Smaller subheadline */
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 15px; /* Reduced margin */
 }
 
 /* Buttons */
 .btn {
     display: inline-block;
-    padding: 12px 25px;
-    border-radius: 30px;
+    padding: 8px 18px; /* Smaller padding */
+    border-radius: 25px; /* Slightly smaller radius */
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease-in-out; /* Added transform */
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
     text-align: center;
     cursor: pointer;
     border: none;
-    font-size: 1.1em;
+    font-size: 0.9em; /* Smaller font size for buttons */
+    margin: 5px; /* Space between buttons */
 }
 
 .primary-btn {
-    background-color: #d9534f; /* Red from your logo */
+    background-color: #d9534f;
     color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2); /* Smaller shadow */
 }
 
 .primary-btn:hover {
-    background-color: #c9302c; /* Darker red */
-    transform: translateY(-2px);
+    background-color: #c9302c;
+    transform: translateY(-1px);
 }
 
 .secondary-btn {
-    background-color: #5bc0de; /* Blueish color, perhaps from GN2R's eyes */
+    background-color: #5bc0de;
     color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 }
 
 .secondary-btn:hover {
-    background-color: #31b0d5; /* Darker blue */
-    transform: translateY(-2px);
+    background-color: #31b0d5;
+    transform: translateY(-1px);
 }
 
-.newsletter-btn {
-    background-color: #5cb85c; /* Green for subscribe */
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 1em;
-}
-
-.newsletter-btn:hover {
-    background-color: #4cae4c;
-}
-
-/* Sections */
-section {
-    padding: 60px 0;
-    margin-bottom: 20px;
-}
-
+/* Hero Section */
 .hero-section {
-    background: linear-gradient(to bottom, #e9ecef, #f8f8f8); /* Subtle gradient */
-    padding: 80px 0 60px;
+    background: linear-gradient(to bottom, #e9ecef, #f8f8f8);
+    padding: 20px 0 15px; /* Drastically reduced padding */
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Smaller shadow */
 }
 
 .hero-logo {
-    max-width: 250px; /* Adjust size as needed */
+    max-width: 180px; /* Much smaller logo */
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 5px; /* Reduced margin */
 }
 
-.subheadline {
-    font-size: 1.3em;
-    color: #555;
-    max-width: 700px;
-    margin: 0 auto 30px;
+.main-cta-area {
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
 
-.intro-gn2r {
+/* Condensed Intro GN2R Section */
+.intro-gn2r-condensed {
     background-color: #fff;
-    padding-top: 40px; /* Less padding to bring it closer to hero */
+    padding: 15px 0; /* Reduced padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-/* GN2R Character Area and Surrounding Logos */
-.gn2r-character-area {
-    position: relative; /* Allows absolute positioning of children */
-    width: 350px; /* Adjust based on desired size of character + logos */
-    height: 350px; /* Keep it square or adjust as needed */
-    margin: 40px auto 20px; /* Center the entire block, added margin-bottom */
-    display: flex; /* Helps center the main character image within it */
+.gn2r-character-intro {
+    display: flex;
+    flex-direction: column; /* Stack image and text */
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.gn2r-character-area-condensed {
+    position: relative;
+    width: 200px; /* Very small character area */
+    height: 200px;
+    margin: 0 auto; /* Center */
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.gn2r-image-main {
-    max-width: 280px; /* Slightly smaller to make room for surrounding logos */
+.gn2r-image-main-condensed {
+    max-width: 150px; /* Very small GN2R */
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    position: relative;
-    z-index: 2; /* Make sure GN2R is on top of any overlapping logos */
-}
-
-.tech-logo {
-    position: absolute;
-    width: 80px; /* Adjust size of tech logos */
-    height: auto;
-    background-color: rgba(255, 255, 255, 0.8); /* Slight background for visibility */
-    padding: 5px;
-    border-radius: 50%; /* Make them circular */
+    border-radius: 5px; /* Less rounded */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    z-index: 1; /* Make them slightly behind GN2R if they overlap */
+    position: relative;
+    z-index: 2;
 }
 
-/* Positioning for individual tech logos */
-.pi-logo {
-    top: 0;
-    left: 10%;
-    transform: rotate(-10deg); /* Playful tilt */
+.tech-logo-condensed {
+    position: absolute;
+    width: 40px; /* Tiny tech logos */
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.7); /* More transparent */
+    padding: 3px; /* Smaller padding */
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    z-index: 1;
 }
 
-.arduino-logo {
-    bottom: 0;
-    right: 10%;
+/* Positioning for tiny tech logos */
+.pi-logo-condensed {
+    top: 5%;
+    left: 5%;
+    transform: rotate(-10deg);
+}
+
+.arduino-logo-condensed {
+    bottom: 5%;
+    right: 5%;
     transform: rotate(15deg);
 }
 
-/* Styling for the Engineering Design Process image */
-.engineering-process-image {
-    display: block; /* Ensures it takes its own line */
-    max-width: 600px; /* Adjust max width as desired */
-    width: 100%; /* Make it responsive */
-    height: auto;
-    margin: 30px auto; /* Center it and give space from above/below */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Subtle shadow */
-    border-radius: 8px; /* Slightly rounded corners */
+.gn2r-intro-text {
+    font-size: 0.9em; /* Smaller intro text */
+    max-width: 300px;
+    margin-top: 5px; /* Closer to image */
 }
 
-
-/* Optional: Adjust existing gn2r-text-flex if needed */
-.gn2r-text-flex {
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Space between paragraphs */
-    margin-top: 20px; /* Space from the image area */
-}
-.gn2r-text-flex p {
-    text-align: center; /* Ensure text remains centered within this section */
-}
-
-.learn-by-doing {
+/* Condensed Newsletter Section */
+.newsletter-signup-condensed {
     background-color: #e9f5ff; /* Light blue background */
+    padding: 15px 0; /* Reduced padding */
+    margin-top: 0; /* No margin from previous section */
 }
 
-.benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
-    text-align: center;
-}
-
-.benefit-card {
-    background-color: #fff;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    transition: transform 0.2s ease-in-out;
-}
-
-.benefit-card:hover {
-    transform: translateY(-5px);
-}
-
-.benefit-card h3 {
-    margin-top: 0;
-    font-size: 1.3em;
-    color: #5bc0de;
-}
-
-.what-you-need, .class-signup, .newsletter-signup {
-    background-color: #fff;
-}
-
-.newsletter-signup {
-    padding-bottom: 80px; /* More space at bottom */
-}
-
-.newsletter-form {
+.newsletter-form-condensed {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-    margin-top: 30px;
+    gap: 8px; /* Reduced gap */
+    margin-top: 10px; /* Reduced margin */
 }
 
-.newsletter-form input[type="email"] {
-    padding: 12px 20px;
+.newsletter-form-condensed input[type="email"] {
+    padding: 8px 15px; /* Smaller padding */
     border: 1px solid #ccc;
-    border-radius: 30px;
+    border-radius: 20px; /* Smaller radius */
     width: 100%;
-    max-width: 400px;
-    font-size: 1em;
-    text-align: center; /* Center placeholder text */
+    max-width: 250px; /* Smaller max width */
+    font-size: 0.9em; /* Smaller font */
+    text-align: center;
 }
 
-/* Footer */
-footer {
+.newsletter-btn-condensed {
+    padding: 8px 15px; /* Smaller padding */
+    font-size: 0.9em; /* Smaller font */
+    border-radius: 20px;
+}
+
+/* Condensed Footer */
+.condensed-footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 25px 0;
-    font-size: 0.9em;
+    padding: 10px 0; /* Minimal padding */
+    font-size: 0.8em; /* Very small text */
 }
 
-footer a {
-    color: #5bc0de;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Media Queries for Responsiveness */
-@media (min-width: 768px) {
-    /* Removed the gn2r-flex style for row direction as gn2r-character-area handles the image and text is in gn2r-text-flex */
-    .intro-gn2r p { /* Apply text-align to the paragraphs in this section */
-        text-align: center; /* or 'left' if preferred */
-    }
-
-    .newsletter-form {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .newsletter-form input[type="email"] {
-        flex-grow: 1;
-        max-width: 300px; /* Allow input to grow but cap it */
-        text-align: left; /* Align input text to left */
-    }
-}
-
-@media (max-width: 767px) {
+/* Media Queries for Mobile (Further Condensation if needed, but primary goal is overall condensation) */
+@media (max-width: 600px) {
     h1 {
-        font-size: 2em;
-    }
-    h2 {
         font-size: 1.8em;
     }
-    .hero-section {
-        padding: 60px 0 40px;
+    h2 {
+        font-size: 1.4em;
     }
-    .btn {
-        padding: 10px 20px;
+    .subheadline {
         font-size: 1em;
     }
-    .newsletter-form input[type="email"] {
-        max-width: 90%;
+    .btn {
+        padding: 6px 12px;
+        font-size: 0.8em;
     }
-    .gn2r-character-area {
-        width: 280px; /* Smaller size for mobile */
-        height: 280px;
-        margin-top: 20px;
+    .hero-logo {
+        max-width: 150px;
     }
-    .gn2r-image-main {
+    .gn2r-character-area-condensed {
+        width: 160px;
+        height: 160px;
+    }
+    .gn2r-image-main-condensed {
+        max-width: 120px;
+    }
+    .tech-logo-condensed {
+        width: 30px;
+    }
+    .newsletter-form-condensed input[type="email"] {
         max-width: 200px;
-    }
-    .tech-logo {
-        width: 60px; /* Smaller tech logos on mobile */
-    }
-    /* Adjust mobile positions to avoid overlapping */
-    .pi-logo {
-        top: 5%;
-        left: 5%;
-    }
-    .arduino-logo {
-        bottom: 5%;
-        right: 5%;
-    }
-    /* Engineering process image */
-    .engineering-process-image {
-        max-width: 90%; /* Adjust for smaller screens */
     }
 }
