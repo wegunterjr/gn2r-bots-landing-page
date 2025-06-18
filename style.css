@@ -3,12 +3,11 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.4; /* Tighter line height */
+    line-height: 1.4;
     color: #333;
     background-color: #f8f8f8;
-    overflow-y: hidden; /* Hide scrollbar for a "no-scroll" feel if content fits */
+    /* The "overflow-y: hidden;" rule was removed from here to enable scrolling */
 }
-
 .container {
     max-width: 900px; /* Slightly wider to pack more horizontally */
     margin: 0 auto;
