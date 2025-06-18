@@ -349,3 +349,7 @@ stripe-buy-button {
     padding: 12px 25px;
     font-size: 1em;
 }
+
+.cta-box-newsletter .cta-button-wrapper {
+    margin-bottom: 70px; 
+}
