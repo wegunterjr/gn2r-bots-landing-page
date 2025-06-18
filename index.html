@@ -13,19 +13,30 @@
             <img src="images/Large Logo.png" alt="GN2R Bots Logo" class="hero-logo">
             <h1>Code Your Robot Adventure!</h1>
             <p class="subheadline">Fun, hands-on robotics for beginners of all ages. Learn to code by building awesome robots with your guide, GN2R!</p>
-            
-            <div class="main-cta-area">
-         <script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
 
-<stripe-buy-button
-  buy-button-id="buy_btn_1RbEPvKoOMzd9e8wnwe1hPNZ"
-  publishable-key="pk_live_51RSBt0KoOMzd9e8whzy0pDXAJ2f2A8pOL16EF3eJnwndQw9JhdVmVQL6b6fupwsy7zheJYpJWf01byMo2fysnJ6I00bv1M3EB5"
->
-</stripe-buy-button>
-                <a href="#newsletter-section" class="btn secondary-btn newsletter-scroll-btn">Get Robo-News!</a>
-            </div>
+<div class="main-cta-area">
+
+    <div class="cta-box">
+        <h3 class="cta-title">Online Fee</h3>
+        <p class="cta-price">$150 <span class="price-qualifier">per month</span></p>
+        <div class="cta-button-wrapper">
+            <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+            <stripe-buy-button
+              buy-button-id="buy_btn_1RbEPvKoOMzd9e8wnwe1hPNZ"
+              publishable-key="pk_live_51RSBt0KoOMzd9e8whzy0pDXAJ2f2A8pOL16EF3eJnwndQw9JhdVmVQL6b6fupwsy7zheJYpJWf01byMo2fysnJ6I00bv1M3EB5"
+            ></stripe-buy-button>
+        </div>
+    </div>
+
+    <div class="cta-box">
+        <h3 class="cta-title">Project News</h3>
+        <p class="cta-description">Get the latest updates and tips from GN2R!</p>
+        <div class="cta-button-wrapper">
+            <a href="#newsletter-section" class="btn secondary-btn newsletter-scroll-btn">Get Robo-News!</a>
+        </div>
+    </div>
+
+</div>
         </div>
     </header>
 
@@ -41,12 +52,17 @@
             </div>
         </div>
     </section>
-
+    
     <section id="newsletter-section" class="newsletter-signup-condensed">
-        <div class="container">
+
+            <div class="container">
             <h2>Stay Connected!</h2>
             <p>Get project updates & tips from GN2R Bots:</p>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfgNgHV7NNZeOiJlyxJhaTd3MJimXvforaPRdErGZe3NCnYBg/viewform?embedded=true" width="640" height="640" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+            <div class="iframe-wrapper">
+                
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfgNgHV7NNZeOiJlyxJhaTd3MJimXvforaPRdErGZe3NCnYBg/viewform?embedded=true" width="640" height="640" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
             <p class="privacy-note">We respect your privacy. Your information is safe with us.</p>
         </div>
     </section>

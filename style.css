@@ -101,6 +101,11 @@ p {
 }
 
 .main-cta-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;    
+    flex-wrap: wrap;;
     margin-top: 10px;
     margin-bottom: 15px;
 }
@@ -178,6 +183,32 @@ p {
     margin-top: 0; /* No margin from previous section */
 }
 
+/* --- Changes Start Here --- */
+
+/* Updated container style for the newsletter section */
+.newsletter-signup-condensed .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 850px; /* Gives space for vertical centering */
+}
+
+/* New wrapper for the iframe to control its alignment */
+.iframe-wrapper {
+    flex-grow: 1; /* Allows the wrapper to grow and fill vertical space */
+    display: flex;
+    justify-content: center; /* Centers iframe horizontally */
+    align-items: center;     /* Centers iframe vertically */
+    width: 100%;
+}
+
+/* Makes the iframe responsive */
+.iframe-wrapper iframe {
+    max-width: 100%;
+}
+/* --- Changes End Here --- */
+
+
 .newsletter-form-condensed {
     display: flex;
     flex-direction: column;
@@ -242,4 +273,79 @@ p {
     .newsletter-form-condensed input[type="email"] {
         max-width: 200px;
     }
+}
+
+/* --- CTA Box Layout Styles --- */
+
+/* This is the main flex container for the two boxes */
+.main-cta-area {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* This makes both boxes equal height */
+    gap: 30px; /* Space between the boxes */
+    flex-wrap: wrap; /* Allows boxes to stack on smaller screens */
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+/* This styles the individual boxes, creating the square container */
+.cta-box {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    width: 280px;
+    padding: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stacks content vertically */
+}
+
+/* Title styling within the box */
+.cta-title {
+    font-size: 1.3em;
+    color: #333;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Price styling for the subscription box */
+.cta-price {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.price-qualifier {
+    display: block;
+    font-size: 0.4em; /* Relative to the parent .cta-price */
+    font-weight: normal;
+    color: #666;
+}
+
+/* Description styling for the newsletter box */
+.cta-description {
+    font-size: 1em;
+    color: #555;
+    flex-grow: 1; /* Pushes the button to the bottom */
+    margin-bottom: 20px;
+}
+
+/* Wrapper to help align the buttons at the bottom */
+.cta-button-wrapper {
+    margin-top: auto; /* Critical for pushing button to the bottom */
+}
+
+/* Ensures the Stripe button is centered */
+stripe-buy-button {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+/* Make the newsletter button look substantial */
+.cta-box .newsletter-scroll-btn {
+    padding: 12px 25px;
+    font-size: 1em;
 }
